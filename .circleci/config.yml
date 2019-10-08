@@ -170,8 +170,8 @@ jobs:
           name: "Drupal 9 upgrade checklist"
           command: |
             cd web
-            drupal-check -ad web/modules/custom
-            drupal-check -ad web/modules/features
+            ../vendor/bin/drupal-check -ad modules/custom
+            ../vendor/bin/drupal-check -ad modules/features
       - run:
           name: "Install test dependencies"
           command: |
