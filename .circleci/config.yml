@@ -167,6 +167,12 @@ jobs:
             ../vendor/bin/drush ev "print_r(\Drupal::service('flysystem_factory')->ensure());"
             curl -sD - -o /dev/null http://par.localhost
       - run:
+          name: "Drupal 9 upgrade checklist"
+          command: |
+            cd web
+            drupal-check -ad web/modules/custom
+            drupal-check -ad web/modules/features
+      - run:
           name: "Install test dependencies"
           command: |
             cd tests
