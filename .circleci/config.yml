@@ -16,6 +16,10 @@ references:
           POSTGRES_PASSWORD: 123456
           POSTGRES_DB: par
 
+      - image: beisopss/opss-functional-tests:latest
+        environment:
+          SERVICE_ID: par
+
     environment:
       TEST_REPORTS: ~/par/tests/reports
       S3_ARTIFACTS_BUCKET: beis-par-artifacts
@@ -145,6 +149,8 @@ jobs:
       - *restore_dependencies
       - *restore_scaffold
       - *configure_webroot
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run:
           name: "Importing database"
           command: cd web && ../vendor/bin/drush sql-cli @dev < ../backups/${SANITISED_DATABASE}
@@ -184,6 +190,10 @@ jobs:
             cd tests
             npm run ci -- --tag ci
             npm run generate-report
+      - run:
+          name: "Run new feature tests"
+          command: |
+            docker run beisopss/opss-functional-tests mvn --quiet --file ./par/pom.xml test -Dcucumber.options=“--tags @smoke” -Dhostname=localhost
       # Save artifacts
       - store_artifacts:
           path: /var/www/html/tests/reports
@@ -199,6 +209,8 @@ jobs:
       - *restore_dependencies
       - *restore_scaffold
       - *configure_webroot
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run:
           name: "Importing database"
           command: cd web && ../vendor/bin/drush sql-cli @dev < ../backups/${SANITISED_DATABASE}
@@ -235,6 +247,10 @@ jobs:
             cd tests
             npm run ci -- --tag ci
             npm run generate-report
+      - run:
+          name: "Run new feature tests"
+          command: |
+            docker run beisopss/opss-functional-tests mvn --quiet --file ./par/pom.xml test -Dcucumber.options=“--tags @smoke” -Dhostname=localhost
       # Save artifacts
       - store_artifacts:
           path: /var/www/html/tests/reports
