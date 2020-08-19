@@ -1044,3 +1044,23 @@ function par_data_update_8044() {
     }
   }
 }
+
+/**
+ * PAR-1637 Update email field as required.
+ */
+function par_data_update_8045() {
+  $entity_definition_update_manager = \Drupal::entityDefinitionUpdateManager();
+
+  // New fields definitions to be updated to the par_data_person entity.
+  // @see https://www.drupal.org/node/3034742
+  $person_field_storage_definition = $entity_definition_update_manager->getFieldStorageDefinition('email', 'par_data_person');
+  $person_field_storage_definition->setRequired(TRUE);
+
+  // New fields definitions to be updated to the par_data_person entity.
+  // @see https://www.drupal.org/node/3034742
+  $inspection_plan_field_storage_definition = $entity_definition_update_manager->getFieldStorageDefinition('summary', 'par_data_inspection_plan');
+  $inspection_plan_field_storage_definition->setRequired(FALSE);
+
+  $entity_definition_update_manager->updateFieldStorageDefinition($person_field_storage_definition);
+  $entity_definition_update_manager->updateFieldStorageDefinition($inspection_plan_field_storage_definition);
+}

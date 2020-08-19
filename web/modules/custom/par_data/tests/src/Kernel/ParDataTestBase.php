@@ -302,6 +302,7 @@ class ParDataTestBase extends EntityKernelTestBase {
     $values += [
       'type' => 'advice',
       'advice_type' => 'To Local Authority',
+      'advice_title' => 'Title for this advice',
       'notes' => $this->randomString(1000),
       'visible_authority' => TRUE,
       'visible_coordinator' => TRUE,
@@ -569,6 +570,8 @@ class ParDataTestBase extends EntityKernelTestBase {
 
     $values += [
       'type' => 'inspection_plan',
+      'title' => 'Title for inspection plans',
+      'summary' => 'All inspection plans should have a descriptive summary.',
       'valid_date' => [
         'value' => '2016-01-01',
         'end_value' => '2018-01-01',
