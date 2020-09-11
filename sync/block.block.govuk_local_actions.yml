@@ -1,0 +1,20 @@
+uuid: a442e77e-5b44-463c-893f-27ee9bbaad5a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - govuk
+_core:
+  default_config_hash: mrEgRZgXdTBlhwvKm8lE9Jvb9ax4SVVMM00fuPyAQcU
+id: govuk_local_actions
+theme: govuk
+region: content
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

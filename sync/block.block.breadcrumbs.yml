@@ -1,0 +1,22 @@
+uuid: 47b97e81-971a-4212-ab98-e0f4869395dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - govuk
+_core:
+  default_config_hash: aHn8WI5tAwmsYh4eI1aUlyEfMa0GHSjKElKPPVmqdJI
+id: breadcrumbs
+theme: govuk
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
