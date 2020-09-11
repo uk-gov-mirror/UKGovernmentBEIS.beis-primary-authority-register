@@ -6,14 +6,13 @@ par:
     theme:
       css/par.css: {}
   dependencies:
-    - par/par-vendor
+    - govuk_par/par-vendor
 
 par-vendor:
   version: 1.0
   js:
     javascript/vendor/console.log-wrapper/consolelog.min.js: {}
     javascript/vendor/console.log-wrapper/consolelog.detailprint.min.js: {}
-    javascript/vendor/govuk/show-hide-content.js: {}
   dependencies:
     - core/jquery
     - core/drupal.ajax
