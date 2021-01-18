@@ -20,6 +20,7 @@ manifest.yml
 /clamav/
 /tests/
 /vendor/
+/backups/
 
 # Ignore package files
 phpunit.xml

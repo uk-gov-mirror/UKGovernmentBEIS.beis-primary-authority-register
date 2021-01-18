@@ -1,12 +1,12 @@
+defaults: &defaults
+  buildpacks:
+    - php_buildpack
+  memory: 2G
+  disk_quota: 4096M
+  timeout: 120
+
 applications:
   - name: beis-par-production
+    <<: *defaults
     routes:
       - route: primary-authority.beis.gov.uk
-    buildpack: php_buildpack
-    memory: 2G
-    disk_quota: 4096M
-    timeout: 120
-    services:
-      - par-pg-production
-      - par-redis-production
-      - opss-log-drain

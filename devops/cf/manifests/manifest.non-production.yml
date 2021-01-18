@@ -1,8 +1,12 @@
+defaults: &defaults
+  buildpacks:
+    - php_buildpack
+  memory: 2G
+  disk_quota: 4096M
+  timeout: 120
+
 applications:
   - name: ((app))
+    <<: *defaults
     routes:
       - route: ((app)).cloudapps.digital
-    buildpack: php_buildpack
-    memory: 2G
-    disk_quota: 2048M
-    timeout: 120
