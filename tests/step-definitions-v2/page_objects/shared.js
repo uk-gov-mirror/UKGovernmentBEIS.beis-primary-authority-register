@@ -186,7 +186,7 @@ module.exports = {
             return this
                 .clickLinkByPureText('Dashboard')
                 .clickLinkByPartialText('See your partnerships')
-                .assert.containsText('h1.heading-xlarge', 'Your partnerships')
+                .assert.containsText('h1.govuk-heading-l', 'Your partnerships')
                 .setValue('#edit-keywords', search)
                 .click('#edit-partnership-status-1 option[value="' + status + '"]')
                 .click('#edit-submit-par-user-partnerships')
@@ -196,7 +196,7 @@ module.exports = {
             return this
                 .clickLinkByPureText('Helpdesk')
                 .clickLinkByPartialText('Manage partnerships')
-                .assert.containsText('h1.heading-xlarge', 'Dashboard')
+                .assert.containsText('h1.govuk-heading-l', 'Dashboard')
                 .setValue('#edit-keywords', search)
                 .click('#edit-partnership-status option[value="' + status + '"]')
                 .click('#edit-submit-helpdesk-dashboard')

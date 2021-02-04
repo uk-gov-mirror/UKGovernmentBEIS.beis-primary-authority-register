@@ -60,9 +60,9 @@ Then('I should not see {string}', function (string) {
 
    Then('I should see confirmation message {string}', function (string) {
            return client
-   	     .waitForElementPresent('h1.heading-xlarge',6000)
+   	     .waitForElementPresent('h1.govuk-heading-l',6000)
    	    browser.expect.element('#main').text.to.not.equal(string);
-   	     //.assert.containsText('h1.heading-xlarge',"You're new person has been created")
+   	     //.assert.containsText('h1.govuk-heading-l',"You're new person has been created")
 
          });
 

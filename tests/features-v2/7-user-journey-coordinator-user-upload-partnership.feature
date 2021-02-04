@@ -12,7 +12,7 @@ Feature: Coordinator User - Upload Members
         # UPLOAD MEMBERS
 
         When I click the link text "upload a member list (csv)"
-        Then the element "h1.heading-xlarge" contains the text "Upload a list of members"
+        Then the element "h1.govuk-heading-l" contains the text "Upload a list of members"
 
         # SUPPORT LINKS
 
@@ -23,7 +23,7 @@ Feature: Coordinator User - Upload Members
 
         When I upload the file "files/csv_test_errors.csv" to field "#edit-csv-upload"
         And I click on the button "#edit-upload"
-        Then the element "h1.heading-xlarge" contains the text "CSV validation errors"
+        Then the element "h1.govuk-heading-l" contains the text "CSV validation errors"
         And the element "#edit-info--description em a" contains the text "Member Guidance Page"
         Then the element "#edit-error-list thead" contains the text "Line"
         And the element "#edit-error-list thead" contains the text "Column"
@@ -40,12 +40,12 @@ Feature: Coordinator User - Upload Members
 
         # CSV PROCESSING
 
-        Then the element "h1.heading-xlarge" contains the text "Upload a list of members"
+        Then the element "h1.govuk-heading-l" contains the text "Upload a list of members"
         When I upload the file "files/csv_test_valid.csv" to field "#edit-csv-upload"
         And I click on the button "#edit-upload"
-        Then the element "h1.heading-xlarge" contains the text "Confirm member upload"
+        Then the element "h1.govuk-heading-l" contains the text "Confirm member upload"
         When I click on the button "#edit-save"
-        Then the element "h1.heading-xlarge" contains the text "Member list uploaded"
+        Then the element "h1.govuk-heading-l" contains the text "Member list uploaded"
         When I click on the button "#edit-done"
         And I open the path "/user/logout"
 
@@ -65,7 +65,7 @@ Feature: Coordinator User - Upload Members
         And I click on the button "#edit-next"
         And I click on the radio "#edit-partnership-cover-default"
         And I click on the button "#edit-next"
-        Then the element "h1.heading-xlarge" contains the text "Partnership is approved"
+        Then the element "h1.govuk-heading-l" contains the text "Partnership is approved"
         And the element "#edit-partnership-info" contains the text "Organisation For Coordinated Partnership"
         And I click on the button "#edit-done"
 
@@ -79,7 +79,7 @@ Feature: Coordinator User - Upload Members
         And I click the link text "Organisation For Coordinated Partnership"
         Then the element "h1" is not empty
         When I click the link text "show members list"
-        Then the element "h1.heading-xlarge" contains the text "Members list"
+        Then the element "h1.govuk-heading-l" contains the text "Members list"
 
         And the element ".table-scroll-wrapper" contains the text "Coordinated Member 1"
         And the element ".table-scroll-wrapper" contains the text "Coordinated Member 2"
@@ -89,12 +89,12 @@ Feature: Coordinator User - Upload Members
         # REUPLOAD MEMBERS
 
         When I click the link text "Upload a Member List (CSV)"
-        Then the element "h1.heading-xlarge" contains the text "Upload a list of members"
+        Then the element "h1.govuk-heading-l" contains the text "Upload a list of members"
         When I upload the file "files/csv_test_second.csv" to field "#edit-csv-upload"
         And I click on the button "#edit-upload"
-        Then the element "h1.heading-xlarge" contains the text "Confirm member upload"
+        Then the element "h1.govuk-heading-l" contains the text "Confirm member upload"
         When I click on the button "#edit-save"
-        Then the element "h1.heading-xlarge" contains the text "Member list uploaded"
+        Then the element "h1.govuk-heading-l" contains the text "Member list uploaded"
         When I click on the button "#edit-done"
 
         # RE-CHECK MEMBERS (COORDINATOR)
@@ -104,7 +104,7 @@ Feature: Coordinator User - Upload Members
         And I click the link text "Organisation For Coordinated Partnership"
         Then the element "h1" is not empty
         When I click the link text "show members list"
-        Then the element "h1.heading-xlarge" contains the text "Members list"
+        Then the element "h1.govuk-heading-l" contains the text "Members list"
 
         When I add "Coordinated Member 2" to the inputfield "#edit-organisation-name"
         And I click on the button "#edit-submit-members-list"

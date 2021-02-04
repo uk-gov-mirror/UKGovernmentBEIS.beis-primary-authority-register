@@ -54,10 +54,10 @@ Feature: Coordinator User - Update Partnership
         And the element "#block-par-theme-content" contains the text "Limited Liability Partnership"
         And the element "#block-par-theme-content" contains the text "14 January 2018"
         When I click on the button "#edit-save"
-        And the element "h1.heading-xlarge" contains the text "Member added"
+        And the element "h1.govuk-heading-l" contains the text "Member added"
         When I click on the button ".button"
         # And I run tota11y against the current page
-        And the element "h1.heading-xlarge" contains the text "Members list"
+        And the element "h1.govuk-heading-l" contains the text "Members list"
         And the element ".table-scroll-wrapper" contains the text "New Member One"
         And the element ".table-scroll-wrapper" contains the text "14 January 2018"
 
@@ -84,7 +84,7 @@ Feature: Coordinator User - Update Partnership
         And I click on the button "#edit-save"
         And the element "#edit-covered-by-inspection" contains the text "Yes"
         And I click on the button "#edit-done"
-        Then the element "h1.heading-xlarge" contains the text "Members list"
+        Then the element "h1.govuk-heading-l" contains the text "Members list"
 
         # CEASE MEMBER
 
@@ -94,7 +94,7 @@ Feature: Coordinator User - Update Partnership
         And I add "2" to the inputfield "#edit-month"
         And I add "2018" to the inputfield "#edit-year"
         And I click on the button "#edit-next"
-        Then the element "h1.heading-xlarge" contains the text "Membership Ceased"
+        Then the element "h1.govuk-heading-l" contains the text "Membership Ceased"
         And I click on the button "#edit-save"
         Then the element "a*=New Member One" does not exist
         Then the element "Cease membership" does not exist
@@ -120,7 +120,7 @@ Feature: Coordinator User - Update Partnership
         # EDIT ABOUT THE ORGANISATION
 
         When I click the link text "edit about the organisation"
-        Then the element "h1.heading-xlarge" contains the text "Information about the organisation"
+        Then the element "h1.govuk-heading-l" contains the text "Information about the organisation"
         And I add "Change to the about organisation details section" to the inputfield "#edit-about-business"
         And I click on the button "#edit-save"
         Then the element "#edit-about" contains the text "Change to the about organisation details section"
@@ -129,7 +129,7 @@ Feature: Coordinator User - Update Partnership
 
         When I click the link text "add another trading name"
         # And I run tota11y against the current page
-        Then the element "h1.heading-xlarge" contains the text "Add a trading name for your organisation"
+        Then the element "h1.govuk-heading-l" contains the text "Add a trading name for your organisation"
         When I add "Different Trading Name" to the inputfield "#edit-trading-name"
         And I click on the button "#edit-save"
         Then the element "#edit-trading-names" contains the text "Different Trading Name"
@@ -138,7 +138,7 @@ Feature: Coordinator User - Update Partnership
 
         When I click the link text "edit trading name"
         # And I run tota11y against the current page
-        Then the element "h1.heading-xlarge" contains the text "Edit trading name for your organisation"
+        Then the element "h1.govuk-heading-l" contains the text "Edit trading name for your organisation"
         When I add "Different Trading Name (edited)" to the inputfield "#edit-trading-name"
         And I click on the button "#edit-save"
         Then the element "#edit-trading-names" contains the text "Different Trading Name (edited)"
@@ -153,7 +153,7 @@ Feature: Coordinator User - Update Partnership
         And I add "2079999999" to the inputfield "#edit-work-phone"
         And I add "078659999999" to the inputfield "#edit-mobile-phone"
         And I click on the button "#edit-next"
-        Then the element "h1.heading-xlarge" contains the text "Review contact information"
+        Then the element "h1.govuk-heading-l" contains the text "Review contact information"
         Then the element "#edit-name" contains the text "Mr Tim Whistler"
         And the element "#edit-work-phone" contains the text "2079999999"
         And the element "#edit-mobile-phone" contains the text "078659999999"

@@ -12,7 +12,7 @@ Given(/^I open the path "([^"]*)"$/, (locpath) => {
 // Starting point: After review and submission complete
 When('The page title is {string}', function (title) {
     return shared
-        .assert.containsText('h1.heading-xlarge .heading-secondary', 'New partnership application')
+        .assert.containsText('h1.govuk-heading-l .heading-secondary', 'New partnership application')
 });
 
 When('there is {string} occurences of element {string}', function (string, string2) {
