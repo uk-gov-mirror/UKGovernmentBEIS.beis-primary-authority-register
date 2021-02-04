@@ -64,7 +64,7 @@ class ParPartnershipContacts extends ParFormPluginBase {
         '#type' => 'html_tag',
         '#tag' => 'h2',
         '#value' => "Contact information",
-        '#attributes' => ['class' => 'heading-large'],
+        '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
       ];
     }
 

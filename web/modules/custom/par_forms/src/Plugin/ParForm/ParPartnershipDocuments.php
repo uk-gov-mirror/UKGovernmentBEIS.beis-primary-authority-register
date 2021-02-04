@@ -56,7 +56,7 @@ class ParPartnershipDocuments extends ParFormPluginBase {
         '#type' => 'html_tag',
         '#tag' => 'h2',
         '#value' => "Documents",
-        '#attributes' => ['class' => 'heading-large'],
+        '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
       ];
     }
 

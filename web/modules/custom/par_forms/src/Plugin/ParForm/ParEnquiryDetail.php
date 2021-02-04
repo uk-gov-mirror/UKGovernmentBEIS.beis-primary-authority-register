@@ -56,7 +56,7 @@ class ParEnquiryDetail extends ParFormPluginBase {
         '#type' => 'html_tag',
         '#tag' => 'h2',
         '#value' => $this->t('Summary of enquiry'),
-        '#attributes' => ['class' => 'heading-large'],
+        '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
       ],
       'date' => $this->getDefaultValuesByKey('request_date', $cardinality, NULL),
       'notes' => $this->getDefaultValuesByKey('notes', $cardinality, NULL),

@@ -163,7 +163,7 @@ class ParEnforcementActionDetail extends ParFormPluginBase {
       '#type' => 'html_tag',
       '#tag' => 'h2',
       '#value' => $this->t('Enforcement Actions'),
-      '#attributes' => ['class' => 'heading-large'],
+      '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
     ];
 
     return $fieldset;

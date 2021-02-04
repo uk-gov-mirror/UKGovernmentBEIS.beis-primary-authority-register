@@ -56,7 +56,7 @@ class ParEnforcementDetail extends ParFormPluginBase {
         '#type' => 'html_tag',
         '#tag' => 'h2',
         '#value' => $this->t('Summary of notice'),
-        '#attributes' => ['class' => 'heading-large'],
+        '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
       ],
       'type' => [
         '#type' => 'html_tag',

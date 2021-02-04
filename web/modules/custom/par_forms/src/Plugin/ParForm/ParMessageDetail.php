@@ -83,7 +83,7 @@ class ParMessageDetail extends ParFormPluginBase {
           '#type' => 'html_tag',
           '#tag' => 'h2',
           '#value' => $this->t('Responses'),
-          '#attributes' => ['class' => ['heading-large']],
+          '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
         ],
         '#attributes' => ['class' => ['form-group']],
       ];

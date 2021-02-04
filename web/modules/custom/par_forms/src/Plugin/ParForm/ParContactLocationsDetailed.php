@@ -69,7 +69,7 @@ class ParContactLocationsDetailed extends ParFormPluginBase {
           '#type' => 'html_tag',
           '#tag' => 'h2',
           '#value' => $this->t('Contacts'),
-          '#attributes' => ['class' => ['heading-large']],
+          '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
         ],
         'info' => [
           '#type' => 'html_tag',

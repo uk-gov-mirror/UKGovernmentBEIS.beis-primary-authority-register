@@ -56,7 +56,7 @@ class ParOrganisationInformationDisplay extends ParFormPluginBase {
       '#type' => 'html_tag',
       '#tag' => 'h2',
       '#value' => "Information about the organisation",
-      '#attributes' => ['class' => 'heading-large'],
+      '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
     ];
 
     // Display the address.

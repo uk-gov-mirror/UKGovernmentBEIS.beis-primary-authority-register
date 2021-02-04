@@ -111,7 +111,7 @@ class ParUserDetail extends ParFormPluginBase {
           '#type' => 'html_tag',
           '#tag' => 'h2',
           '#value' => $this->t('User account'),
-          '#attributes' => ['class' => ['heading-large', 'column-full']],
+          '#attributes' => ['class' => ['heading-large', 'govuk-heading-l', 'column-full']],
         ],
         'info' => [
           '#type' => 'html_tag',

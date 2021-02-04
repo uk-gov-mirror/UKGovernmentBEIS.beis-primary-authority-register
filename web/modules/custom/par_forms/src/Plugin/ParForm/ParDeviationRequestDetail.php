@@ -61,7 +61,7 @@ class ParDeviationRequestDetail extends ParFormPluginBase {
         '#type' => 'html_tag',
         '#tag' => 'h2',
         '#value' => $this->t('Summary of deviation request'),
-        '#attributes' => ['class' => 'heading-large'],
+        '#attributes' => ['class' => ['heading-large', 'govuk-heading-l']],
       ],
       'status' => [
         '#type' => 'html_tag',
